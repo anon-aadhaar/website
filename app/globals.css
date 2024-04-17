@@ -18,16 +18,34 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+@keyframes appear {
+  from { opacity: 0; scale: 0.8; }
+  to { opacity: 1; scale: 1; }
+}
+
+@keyframes fade {
+  from { opacity: 0.5 }
+  to { opacity: 1; }
+}
+
+.appear {
+  animation: appear linear both;
+  animation-timeline: view();
+  animation-range: entry 25% cover 45%;
+}
+
+.appear-fade {
+  animation: fade linear both;
+  animation-timeline: view();
+  animation-range: entry 85% cover 45%;
 }
