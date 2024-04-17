@@ -1,8 +1,12 @@
+import { ProjectCategory } from "../types";
+
 export type WebsiteType = "discord" | "github" | "website";
 export interface ProjectItem {
   name: string;
   tags: string[];
+  pse: boolean;
   links?: Partial<Record<WebsiteType, string>>;
+  categories?: ProjectCategory[];
 }
 
 export const LinkIconMapping: Partial<Record<WebsiteType, string>> = {
@@ -13,6 +17,7 @@ export const LinkIconMapping: Partial<Record<WebsiteType, string>> = {
 
 export const PROJECTS: ProjectItem[] = [
   {
+    pse: true,
     name: "Anon Aadhaar",
     tags: ["React", "TypeScript", "Tailwind CSS"],
     links: {
@@ -20,6 +25,7 @@ export const PROJECTS: ProjectItem[] = [
     },
   },
   {
+    pse: true,
     name: "Anon Aadhaar",
     tags: ["tag1", "tag2", "tag3"],
     links: {
@@ -27,6 +33,7 @@ export const PROJECTS: ProjectItem[] = [
     },
   },
   {
+    pse: true,
     name: "Anon Aadhaar",
     tags: ["tag1", "tag2", "tag3"],
     links: {
@@ -34,6 +41,7 @@ export const PROJECTS: ProjectItem[] = [
     },
   },
   {
+    pse: false,
     name: "Anon Aadhaar",
     tags: ["tag1", "tag2", "tag3"],
     links: {
@@ -41,6 +49,7 @@ export const PROJECTS: ProjectItem[] = [
     },
   },
   {
+    pse: true,
     name: "Anon Aadhaar",
     tags: ["tag1", "tag2", "tag3"],
     links: {

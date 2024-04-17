@@ -4,6 +4,7 @@ import { Accordion } from "@/components/ui/Accordion";
 import { Label } from "@/components/ui/Label";
 import { BlogSection } from "@/sections/learnPage/BlogSection";
 import { WorkflowSection } from "@/sections/learnPage/WorkflowSection";
+import Image from "next/image";
 import React from "react";
 
 export default function LearnPage() {
@@ -14,7 +15,16 @@ export default function LearnPage() {
           Anon aadhaar: private identity
         </Label.Title>
       </div>
-      <WorkflowSection />
+      <div className="flex flex-col gap-14 md:pb-14">
+        <div
+          className="w-full h-[375px] md:h-[470px] bg-[length:100%_375px] md:bg-[length:100%_470px] bg-repeat-round"
+          style={{
+            backgroundImage: `url('/illustrations/learn-shape.svg')`,
+          }}
+        ></div>
+        <WorkflowSection />
+      </div>
+
       <div className="flex flex-col">
         <AppContainer className="flex justify-center py-10">
           <Label.Subtitle className="font-medium text-anon uppercase">

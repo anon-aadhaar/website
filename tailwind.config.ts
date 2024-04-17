@@ -38,6 +38,7 @@ const config: Config = {
         "baltic-sea": {
           100: "#F6EDF4",
           900: "#413941",
+          950: "#231F23",
         },
         "west-side": {
           50: "#FFF9ED",

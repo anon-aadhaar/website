@@ -17,3 +17,11 @@ export const formatDate = (date: Date) => {
 export const indexWithZero = (index: number) => {
   return index.toString().padStart(2, "0");
 };
+
+// add or remove element from array
+export const arrayToggle = (arr: any[], value: any) => {
+  if (arr.includes(value)) {
+    return arr.filter((item) => item !== value);
+  }
+  return [...arr, value];
+};

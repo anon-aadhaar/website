@@ -13,7 +13,7 @@ const Section = classed.h3(
 );
 
 const Paragraph = classed.p(
-  "text-base md:text-lg leading-[150%] font-inter text-anon"
+  "flex flex-col gap-4 text-base md:text-lg leading-[150%] font-inter text-anon"
 );
 
 const Label = {
