@@ -11,7 +11,7 @@ import Link from "next/link";
 const EventCard = ({ eventName, description, date }: EventItem) => {
   return (
     <Card.Base
-      className="flex flex-col gap-[14px] md:flex-row md:items-end appear-fade"
+      className="flex flex-col gap-[14px] md:flex-row md:items-end"
       variant="white"
     >
       <div className="flex flex-col">
