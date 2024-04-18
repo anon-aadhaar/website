@@ -46,7 +46,7 @@ export const AppHeaderMobile = () => {
   return (
     <div className="flex sticky top-6 z-10 md:hidden">
       <AppContainer className="w-full">
-        <div className="grid grid-cols-3 items-center p-[10px] justify-center w-full rounded-lg bg-white/80 backdrop-blur-lg shadow-header">
+        <div className="grid grid-cols-3 items-center p-[10px] justify-center w-full rounded-lg bg-white/90 backdrop-blur-lg shadow-header">
           <Link className="flex col-start-2" href="/">
             <Icons.Logo size={34} className="mx-auto" />
           </Link>

@@ -17,6 +17,7 @@ import {
   ProjectsSources,
 } from "@/shared/types";
 import { classed } from "@tw-classed/react";
+import Image from "next/image";
 import React from "react";
 
 const ProjectSourceMapping: Record<
@@ -51,9 +52,18 @@ export default function ProjectPage() {
       <PageHeader
         title="BUILT WITH ANON AADHAAR"
         description="Discover a curated showcase of innovative projects and applications developed using the Anon Aadhaar Protocol."
-      />
+      >
+        <div className="relative w-full inset-0">
+          <div
+            className="right-0 ml-auto md:absolute md:right-0 md:top-0 w-[330px] h-[330px] lg:w-[854px] lg:h-[507px] lg:top-14 bg-no-repeat"
+            style={{
+              backgroundImage: "url('illustrations/projects-shape-big.svg')",
+            }}
+          ></div>
+        </div>
+      </PageHeader>
       <AppContainer>
-        <Section.Wrapper className="!pt-14 grid grid-cols-1 gap-16 md:grid-cols-[400px_1fr] ">
+        <Section.Wrapper className="!pt-14 grid grid-cols-1 gap-16 lg:grid-cols-[400px_1fr] ">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-5">
               <SectionTitle>{LABELS.COMMON.PROJECTS_CREATED_BY}</SectionTitle>
@@ -115,7 +125,7 @@ export default function ProjectPage() {
       <Banner
         title="Show what you have built"
         description="We are missing your project! Add your project to this page and show your awesomeness to the world."
-        className="md:!text-left"
+        className="lg:!text-left"
         actions={
           <Button className="uppercase" variant="black">
             {LABELS.COMMON.SUBMIT_PROJECT}

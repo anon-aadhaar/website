@@ -57,6 +57,7 @@ const NAVIGATION_SOCIAL: MenuItem[] = [
 
 export const LINKS: Record<string, string> = {
   WEBSITE_FEEDBACK: "",
+  WEBSITE_DEMO: "",
 };
 
 export default function useSettings() {

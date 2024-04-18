@@ -49,3 +49,9 @@ body {
   animation-timeline: view();
   animation-range: entry 85% cover 45%;
 }
+
+.grid-test {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 1rem;
+}

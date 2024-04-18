@@ -1,7 +1,7 @@
 import { classed } from "@tw-classed/react";
 
 const Title = classed.h1(
-  "text-anon uppercase font-medium text-5xl leading-[110%] md:text-[90px] md:leading-[105%]"
+  "font-rajdhani text-anon uppercase font-medium text-5xl leading-[110%] md:text-[72px] md:leading-[105%]"
 );
 
 const Subtitle = classed.h3(
@@ -9,7 +9,7 @@ const Subtitle = classed.h3(
 );
 
 const Section = classed.h3(
-  "font-rajdhani text-[36px] leading-[110%] md:text-4xl font-medium"
+  "font-rajdhani text-[26px] md:text-[36px] leading-[110%] lg:text-4xl font-medium"
 );
 
 const Paragraph = classed.p(
