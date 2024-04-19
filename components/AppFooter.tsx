@@ -2,7 +2,7 @@ import { MenuItem } from "@/shared/types";
 import { AppContainer } from "./AppContainer";
 import Link from "next/link";
 import { Icons } from "./Icons";
-import useSettings, { LINKS } from "@/hooks/useSettings";
+import useSettings, { LINKS, SETTINGS } from "@/hooks/useSettings";
 import { LABELS } from "@/shared/labels";
 import { classed } from "@tw-classed/react";
 
@@ -58,7 +58,7 @@ export const AppFooter = () => {
             </span>
             <Link
               className="group flex items-center order-1 md:order-2"
-              href={LINKS.WEBSITE_FEEDBACK}
+              href={`mailto:${SETTINGS.INFO_MAIL}`}
               target="_blank"
             >
               <FooterNavItem>{LABELS.COMMON.FOOTER.FEEDBACK}</FooterNavItem>

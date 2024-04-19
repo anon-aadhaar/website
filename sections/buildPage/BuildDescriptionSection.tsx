@@ -41,15 +41,15 @@ const BUILD_ITEMS: BuildItem[] = [
     links: [
       {
         title: "GOOD FIRST ISSUES",
-        url: "",
+        url: "https://github.com/anon-aadhaar/anon-aadhaar/labels/good%20first%20issue",
       },
       {
         title: "ENHANCE THE PROTOCOL",
-        url: "",
+        url: "https://github.com/anon-aadhaar/anon-aadhaar/blob/main/.github/PULL_REQUEST_TEMPLATE.md",
       },
       {
         title: "GIVE FEEDBACK ABOUT THE WEBSITE",
-        url: "",
+        url: "https://github.com/anon-aadhaar/anon-aadhaar/discussions/155",
       },
     ],
   },
@@ -61,7 +61,7 @@ const BUILD_ITEMS: BuildItem[] = [
     links: [
       {
         title: "GET INSPIRED",
-        url: "",
+        url: "https://github.com/anon-aadhaar/anon-aadhaar/discussions/155",
       },
     ],
   },

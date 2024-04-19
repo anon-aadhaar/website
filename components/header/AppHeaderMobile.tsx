@@ -1,6 +1,6 @@
 "use client";
 
-import useSettings, { LINKS } from "@/hooks/useSettings";
+import useSettings, { LINKS, SETTINGS } from "@/hooks/useSettings";
 import { Icons } from "../Icons";
 import { MenuItem } from "@/shared/types";
 import Link from "next/link";
@@ -90,7 +90,7 @@ export const AppHeaderMobile = () => {
             />
           </div>
           <div className="flex flex-col items-center justify-between pb-8">
-            <Link href={LINKS.WEBSITE_FEEDBACK} target="_blank">
+            <Link href={`mailto:${SETTINGS.INFO_MAIL}`} target="_blank">
               <NavItem>
                 <span>{LABELS.COMMON.FOOTER.FEEDBACK}</span>
                 <Icons.ExternalLink className="mt-[-2px]" />

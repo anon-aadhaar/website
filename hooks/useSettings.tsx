@@ -37,6 +37,10 @@ const NAVIGATION: MenuItem[] = [
   },
 ];
 
+export const SETTINGS = {
+  INFO_MAIL: "mailto:yanis@pse.dev",
+};
+
 const NAVIGATION_SOCIAL: MenuItem[] = [
   {
     title: "Discord",
@@ -56,8 +60,7 @@ const NAVIGATION_SOCIAL: MenuItem[] = [
 ];
 
 export const LINKS: Record<string, string> = {
-  WEBSITE_FEEDBACK: "",
-  WEBSITE_DEMO: "",
+  WEBSITE_DEMO: " https://anon-aadhaar-example.vercel.app/",
 };
 
 export default function useSettings() {

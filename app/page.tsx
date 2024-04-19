@@ -34,16 +34,18 @@ export default function Home() {
             const clientX = e?.clientX;
             const clientY = e?.clientY;
 
-            const el = document
-              .elementFromPoint(clientX, clientY)
+            const pathElement = document
+              ?.elementFromPoint(clientX, clientY)
               ?.closest("path");
-            if (!el) return;
 
-            const color = (el.attributes as any)?.stroke.value ?? "transparent";
+            if (!pathElement) return;
+
+            const color =
+              (pathElement.attributes as any)?.stroke.value ?? "transparent";
 
             const startingColor = `#00${color.replace("#", "")}`;
 
-            el.animate(
+            pathElement.animate(
               {
                 fill: [startingColor, color, color, startingColor],
               },
@@ -66,7 +68,7 @@ export default function Home() {
       <FeatureSection />
       <EventSection />
       <Banner
-        title="Join the anon aadhaar community"
+        title={LABELS.HOME_PAGE.BANNER.TITLE}
         actions={
           <Button
             variant="black"
