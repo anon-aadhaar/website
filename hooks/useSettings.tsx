@@ -30,7 +30,7 @@ const NAVIGATION: MenuItem[] = [
   },
   {
     title: "Design kit",
-    href: "",
+    href: "https://www.figma.com/file/vAO6X1nWBw96tUv5RTEylW/Anon-Aadhaar-Website?node-id=3%3A3&mode=dev",
     position: "right",
     external: true,
     onlyFooter: true,
