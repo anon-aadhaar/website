@@ -55,3 +55,8 @@ body {
   grid-template-columns: 1fr 300px;
   gap: 1rem;
 }
+
+svg#homepage-svg path {
+  animation: all 2s ease-in-out forwards;
+  fill: transparent;
+}

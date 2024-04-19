@@ -9,7 +9,7 @@ import { Section } from "@/components/Section";
 import { Button } from "@/components/ui/Button";
 import { Tag } from "@/components/ui/Tag";
 import useProjects from "@/hooks/useProjects";
-import { ProjectItem, PROJECTS } from "@/shared/content/projects";
+import { ProjectItem } from "@/shared/content/projects";
 import { LABELS } from "@/shared/labels";
 import {
   ProjectCategories,
@@ -17,7 +17,6 @@ import {
   ProjectsSources,
 } from "@/shared/types";
 import { classed } from "@tw-classed/react";
-import Image from "next/image";
 import React from "react";
 
 const ProjectSourceMapping: Record<
@@ -41,6 +40,19 @@ const SectionTitle = classed.div(
   "uppercase font-rajdhani text-baltic-sea-950 text-[22px] leading-[125%] font-semibold"
 );
 
+const Illustration = () => {
+  return (
+    <div className="relative w-full inset-0">
+      <div
+        className="right-0 ml-auto md:absolute md:top-0 w-[330px] h-[330px] md:right-[100px] md:w-[427px] md:h-[236px] lg:w-[854px] lg:h-[507px] lg:-right-[260px] xl:right-[-110px] lg:top-14 bg-no-repeat"
+        style={{
+          backgroundImage: "url('illustrations/projects-shape-big.svg')",
+        }}
+      ></div>
+    </div>
+  );
+};
+
 export default function ProjectPage() {
   const { projects, handleSource, source, categories, handleCategory } =
     useProjects();
@@ -50,17 +62,10 @@ export default function ProjectPage() {
   return (
     <main>
       <PageHeader
-        title="BUILT WITH ANON AADHAAR"
-        description="Discover a curated showcase of innovative projects and applications developed using the Anon Aadhaar Protocol."
+        title={LABELS.PROJECTS_PAGE.TITLE}
+        description={LABELS.PROJECTS_PAGE.DESCRIPTION}
       >
-        <div className="relative w-full inset-0">
-          <div
-            className="right-0 ml-auto md:absolute md:right-0 md:top-0 w-[330px] h-[330px] lg:w-[854px] lg:h-[507px] lg:top-14 bg-no-repeat"
-            style={{
-              backgroundImage: "url('illustrations/projects-shape-big.svg')",
-            }}
-          ></div>
-        </div>
+        <Illustration />
       </PageHeader>
       <AppContainer>
         <Section.Wrapper className="!pt-14 grid grid-cols-1 gap-16 lg:grid-cols-[400px_1fr] ">
@@ -123,8 +128,8 @@ export default function ProjectPage() {
         </Section.Wrapper>
       </AppContainer>
       <Banner
-        title="Show what you have built"
-        description="We are missing your project! Add your project to this page and show your awesomeness to the world."
+        title={LABELS.PROJECTS_PAGE.BANNER.TITLE}
+        description={LABELS.PROJECTS_PAGE.BANNER.DESCRIPTION}
         className="lg:!text-left"
         actions={
           <Button className="uppercase" variant="black">

@@ -8,7 +8,7 @@ import type * as Classed from "@tw-classed/react";
 const ContentHeaderWrapper = classed.div("", {
   variants: {
     contentFullWidth: {
-      false: "w-full md:w-[447px] lg:w-[828px]",
+      false: "w-full sm:max-w-[360px] md:max-w-[427px] lg:max-w-[828px]",
     },
   },
   defaultVariants: {

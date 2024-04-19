@@ -38,11 +38,11 @@ export const BlogSection = () => {
                     <Card.SmallLabel className="text-scarpa-400 uppercase">
                       {formatDate(article.date)}
                     </Card.SmallLabel>
-                    <Card.Title className="line-clamp-2">
+                    <Card.Title className="line-clamp-2 h-14">
                       {article.title}
                     </Card.Title>
                     <Card.Tag className="text-secondary">
-                      {article.eventName}
+                      {article.label}
                     </Card.Tag>
                   </BlogItemCard>
                 </Link>
@@ -65,12 +65,10 @@ export const BlogSection = () => {
                       {formatDate(video.date)}
                     </Card.SmallLabel>
                     <div className="bg-scarpa-200 aspect-square"></div>
-                    <Card.Title className="line-clamp-2">
+                    <Card.Title className="line-clamp-2 h-14">
                       {video.title}
                     </Card.Title>
-                    <Card.Tag className="text-primary">
-                      {video.eventName}
-                    </Card.Tag>
+                    <Card.Tag className="text-primary">{video.label}</Card.Tag>
                   </BlogItemCard>
                 </Link>
               );

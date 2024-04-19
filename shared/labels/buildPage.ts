@@ -32,7 +32,7 @@ const TOOLS: Tool[] = [
     DESCRIPTION: [
       "Begin your projects with a ready-to-use example voting template",
       "Login with Aadhaar, generate proof, verify proof and vote anonymously",
-      "Easily modify to align with specific project goals",
+      "Quickly adapt to match project goals",
     ],
     IMAGE: "/illustrations/boilerplate-shape.svg",
     URL: "",

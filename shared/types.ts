@@ -10,7 +10,7 @@ export type BlogItem = {
   url: string;
   title: string;
   date: Date;
-  eventName?: string;
+  label?: string;
   readTime?: number;
 };
 
