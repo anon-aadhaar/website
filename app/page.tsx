@@ -45,10 +45,10 @@ export default function Home() {
 
             el.animate(
               {
-                fill: [startingColor, color, startingColor],
+                fill: [startingColor, color, color, startingColor],
               },
               {
-                duration: 1500,
+                duration: 2500,
                 iterations: 1,
                 easing: "ease-in-out",
               }
