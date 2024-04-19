@@ -5,11 +5,15 @@ import { useState } from "react";
 
 export default function useProjects() {
   const [source, setSource] = useState<ProjectSource | undefined>();
+  const [activeCategories, setActiveCategories] = useState<string[]>([]);
 
-  const [categories, setCategories] = useState<ProjectCategory[]>([]);
+  const categoryList: string[] = [
+    // @ts-ignore
+    ...new Set(PROJECTS.map((project) => project.categories).flat()),
+  ];
 
-  const handleCategory = (category: ProjectCategory) => {
-    setCategories(arrayToggle(categories, category));
+  const handleCategory = (category: string) => {
+    setActiveCategories(arrayToggle(activeCategories, category));
   };
 
   const handleSource = (id: ProjectSource) => {
@@ -21,16 +25,17 @@ export default function useProjects() {
     .filter((project) => (source ? project.pse === (source === "pse") : true))
     // filter by category
     .filter((project) =>
-      categories.length === 0
+      activeCategories.length === 0
         ? true
-        : categories.some((category) => project?.categories?.includes(category))
+        : activeCategories.some((category) => project?.categories?.includes(category))
     );
 
   return {
     source,
-    categories,
+    activeCategories,
     projects,
     handleCategory,
     handleSource,
+    categoryList,
   };
 }

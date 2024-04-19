@@ -2,11 +2,13 @@ import { ProjectCategory } from "../types";
 
 export type WebsiteType = "discord" | "github" | "website";
 export interface ProjectItem {
-  name: string;
-  tags: string[];
   pse: boolean;
+  tags?: string[];
+  categories: string[];
+  name: string;
+  description?: string;
+  event?: string;
   links?: Partial<Record<WebsiteType, string>>;
-  categories?: ProjectCategory[];
 }
 
 export const LinkIconMapping: Partial<Record<WebsiteType, string>> = {
@@ -17,43 +19,90 @@ export const LinkIconMapping: Partial<Record<WebsiteType, string>> = {
 
 export const PROJECTS: ProjectItem[] = [
   {
-    pse: true,
-    name: "Anon Aadhaar",
-    tags: ["React", "TypeScript", "Tailwind CSS"],
+    pse: false,
+    name: "AaveAnonify",
     links: {
-      github: "",
+      website: "https://devfolio.co/projects/aaveanonify-cbd3",
     },
-  },
-  {
-    pse: true,
-    name: "Anon Aadhaar",
-    tags: ["tag1", "tag2", "tag3"],
-    links: {
-      github: "",
-    },
-  },
-  {
-    pse: true,
-    name: "Anon Aadhaar",
-    tags: ["tag1", "tag2", "tag3"],
-    links: {
-      github: "",
-    },
+    event: "ETHMumbai 2024",
+    description: "DeFi Meets Artistry in a Tokenized Future",
+    categories: ["Defi", "Artistry", "Tokenization"],
   },
   {
     pse: false,
-    name: "Anon Aadhaar",
-    tags: ["tag1", "tag2", "tag3"],
+    name: "Trip Companion",
     links: {
-      github: "",
+      website: "https://devfolio.co/projects/trip-companion-d3bf",
     },
+    event: "ETHMumbai 2024",
+    description:
+      "Social - find the right partner to travel along in any journey",
+    categories: ["Social", "Travel", "Companionship"],
   },
   {
-    pse: true,
-    name: "Anon Aadhaar",
-    tags: ["tag1", "tag2", "tag3"],
+    pse: false,
+    name: "Banganoir",
     links: {
-      github: "",
+      website: "https://ethglobal.com/showcase/banganoir-sozqd",
     },
+    event: "ETHGlobal Circuit Breaker 2024",
+    description:
+      "Account Abstraction - Banganoir is an ERC4337 Wallet controlled by your Aadhaar identity",
+    categories: ["Account Abstraction", "ERC4337", "Identity"],
+  },
+  {
+    pse: false,
+    name: "BackItUp",
+    links: {
+      website: "https://ethglobal.com/showcase/backitup-oghff",
+    },
+    event: "ETHIndia 2023",
+    description:
+      "Account Abstraction - Crypto backup and recovery system built completely on chain using Zero-Knowledge",
+    categories: ["Crypto Backup", "On-Chain", "Zero-Knowledge"],
+  },
+  {
+    pse: false,
+    name: "agoraCrypt",
+    links: {
+      website: "https://ethglobal.com/showcase/agoracrypt-fc51h",
+    },
+    event: "ETHIndia 2023",
+    description:
+      "Governance - AgoraCrypt enables democratic voting using Multiple ZK Primitives",
+    categories: ["Governance", "Voting", "Zero-Knowledge"],
+  },
+  {
+    pse: false,
+    name: "Aadhaar Shield",
+    links: {
+      website: "https://ethglobal.com/showcase/aadhaar-shield-peokf",
+    },
+    event: "ETHIndia 2023",
+    description:
+      "Identity - Mobile app with seamless QR codes to prove and verify Aadhaar's validity without exposing the actual details.",
+    categories: ["Identity", "Aadhaar", "Privacy"],
+  },
+  {
+    pse: false,
+    name: "VerifyChainX",
+    links: {
+      website: "https://ethglobal.com/showcase/verifychainx-1rete",
+    },
+    event: "ETHIndia 2023",
+    description:
+      "Best Mobile Wallet - Quadratic Voting System, integrates Anon Aadhaar Authentication for secure identification and an ERC4337 Wallet compatible with Aadhaar cards Utilizing Custom Subgraphs to Visualize EAS Attestations",
+    categories: ["Mobile Wallet", "Voting", "Identity Verification"],
+  },
+  {
+    pse: false,
+    name: "Crypto Aid",
+    links: {
+      website: "https://ethglobal.com/showcase/crypto-aid-z81zg",
+    },
+    event: "ETHIndia 2023",
+    description:
+      "Best social impact - It is a decentralised crypto donation platform with the unique factor that funds are stored in a smart contract and we verify the receiver with an Aadhaar card anonymously, once we are able to map users to their cause(s)",
+    categories: ["Social Impact", "Crypto Donation", "Smart Contract"],
   },
 ];

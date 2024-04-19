@@ -54,10 +54,17 @@ const Illustration = () => {
 };
 
 export default function ProjectPage() {
-  const { projects, handleSource, source, categories, handleCategory } =
-    useProjects();
+  const {
+    projects,
+    handleSource,
+    source,
+    activeCategories,
+    handleCategory,
+    categoryList,
+  } = useProjects();
   const noResult =
-    projects.length === 0 && (source !== undefined || categories.length > 0);
+    projects.length === 0 &&
+    (source !== undefined || activeCategories.length > 0);
 
   return (
     <main>
@@ -95,8 +102,8 @@ export default function ProjectPage() {
             <div className="flex flex-col gap-5">
               <SectionTitle>{LABELS.COMMON.CATEGORY}</SectionTitle>
               <div className="flex flex-wrap gap-3">
-                {ProjectCategories.map((category, index) => {
-                  const isActive = categories.includes(category);
+                {categoryList.map((category, index) => {
+                  const isActive = activeCategories.includes(category);
 
                   return (
                     <Tag
