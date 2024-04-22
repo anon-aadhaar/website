@@ -9,14 +9,12 @@ import { Section } from "@/components/Section";
 import { Button } from "@/components/ui/Button";
 import { Tag } from "@/components/ui/Tag";
 import useProjects from "@/hooks/useProjects";
+import { LINKS } from "@/hooks/useSettings";
 import { ProjectItem } from "@/shared/content/projects";
 import { LABELS } from "@/shared/labels";
-import {
-  ProjectCategories,
-  ProjectSource,
-  ProjectsSources,
-} from "@/shared/types";
+import { ProjectSource, ProjectsSources } from "@/shared/types";
 import { classed } from "@tw-classed/react";
+import Link from "next/link";
 import React from "react";
 
 const ProjectSourceMapping: Record<
@@ -139,9 +137,11 @@ export default function ProjectPage() {
         description={LABELS.PROJECTS_PAGE.BANNER.DESCRIPTION}
         className="lg:!text-left"
         actions={
-          <Button className="uppercase" variant="black">
-            {LABELS.COMMON.SUBMIT_PROJECT}
-          </Button>
+          <Link href={LINKS.SUBMIT_PROJECT} target="_blank">
+            <Button className="uppercase" variant="black">
+              {LABELS.COMMON.SUBMIT_PROJECT}
+            </Button>
+          </Link>
         }
       />
     </main>

@@ -47,7 +47,11 @@ export const EventSection = () => {
           <div className="flex flex-col gap-6">
             {EVENTS.map((event, index) => {
               return (
-                <Link key={index} href={event?.url} target="_blank">
+                <Link
+                  key={index}
+                  href={event?.url}
+                  target={event?.url !== "#" ? "_blank" : undefined}
+                >
                   <EventCard {...event} />
                 </Link>
               );

@@ -41,27 +41,31 @@ export const SETTINGS = {
   INFO_MAIL: "mailto:yanis@pse.dev",
 };
 
+export const LINKS: Record<string, string> = {
+  WEBSITE_DEMO: " https://anon-aadhaar-example.vercel.app/",
+  DISCORD: "https://discord.com/invite/sF5CT5rzrR",
+  TWITTER: "https://twitter.com/AnonAadhaar",
+  TELEGRAM: "https://t.me/anon_aadhaar",
+  SUBMIT_PROJECT: "https://github.com/anon-aadhaar/website/labels/projects",
+};
+
 const NAVIGATION_SOCIAL: MenuItem[] = [
   {
     title: "Discord",
-    href: "https://discord.com/invite/sF5CT5rzrR",
+    href: LINKS.DISCORD,
     external: true,
   },
   {
     title: "Twitter",
-    href: "https://twitter.com/AnonAadhaar",
+    href: LINKS.TWITTER,
     external: true,
   },
   {
     title: "Telegram",
-    href: "https://t.me/anon_aadhaar",
+    href: LINKS.TELEGRAM,
     external: true,
   },
 ];
-
-export const LINKS: Record<string, string> = {
-  WEBSITE_DEMO: " https://anon-aadhaar-example.vercel.app/",
-};
 
 export default function useSettings() {
   const leftNavItems = NAVIGATION.filter((item) => item.position === "left");

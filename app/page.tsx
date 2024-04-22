@@ -70,14 +70,16 @@ export default function Home() {
       <Banner
         title={LABELS.HOME_PAGE.BANNER.TITLE}
         actions={
-          <Button
-            variant="black"
-            className="uppercase"
-            icon={<Icons.Discord className="text-white" />}
-            icon-position="left"
-          >
-            {LABELS.COMMON.DISCORD}
-          </Button>
+          <Link href={LINKS.DISCORD} target="_blank">
+            <Button
+              variant="black"
+              className="uppercase"
+              icon={<Icons.Discord className="text-white" />}
+              icon-position="left"
+            >
+              {LABELS.COMMON.DISCORD}
+            </Button>
+          </Link>
         }
       />
     </main>

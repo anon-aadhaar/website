@@ -11,34 +11,34 @@ export const ToolsSection = () => {
         {LABELS.BUILD_PAGE.TOOLS.map(
           ({ TITLE, DESCRIPTION, IMAGE, URL }, index) => {
             return (
-              <Link className="h-full" key={index} href={URL}>
-                <Card.Base
-                  className="flex flex-col gap-5 md:gap-14 h-full"
-                  variant="secondary"
-                >
-                  <span className="text-center text-anon text-4xl font-medium leading-[105%] uppercase lg:text-5xl xl:text-6xl lg:leading-[110%]">
-                    {TITLE}
-                  </span>
-                  <div
-                    className="w-full aspect-square bg-[length:100px_auto] bg-repeat-space"
-                    style={{
-                      backgroundImage: `url(${IMAGE})`,
-                    }}
-                  ></div>
-                  <ul className="flex flex-col gap-3 ml-5 list-disc">
-                    {DESCRIPTION?.map((description, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="text-anon font-inter font-normal text-base leading-6"
-                        >
-                          {description}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </Card.Base>
-              </Link>
+              <Card.Base
+                key={index}
+                href={URL}
+                className="flex flex-col gap-5 md:gap-14 h-full"
+                variant="secondary"
+              >
+                <span className="text-center text-anon text-4xl font-medium leading-[105%] uppercase lg:text-5xl xl:text-6xl lg:leading-[110%]">
+                  {TITLE}
+                </span>
+                <div
+                  className="w-full aspect-square bg-[length:100px_auto] bg-repeat-space"
+                  style={{
+                    backgroundImage: `url(${IMAGE})`,
+                  }}
+                ></div>
+                <ul className="flex flex-col gap-3 ml-5 list-disc">
+                  {DESCRIPTION?.map((description, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="text-anon font-inter font-normal text-base leading-6"
+                      >
+                        {description}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </Card.Base>
             );
           }
         )}
