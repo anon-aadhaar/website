@@ -43,14 +43,14 @@ export default function Home() {
             const color =
               (pathElement.attributes as any)?.stroke.value ?? "transparent";
 
-            const startingColor = `#00${color.replace("#", "")}`;
+            const startingColor = `#80${color.replace("#", "")}`;
 
             pathElement.animate(
               {
-                fill: [startingColor, color, color, startingColor],
+                fill: [startingColor, color],
               },
               {
-                duration: 2500,
+                duration: 500,
                 iterations: 1,
                 easing: "ease-in-out",
               }

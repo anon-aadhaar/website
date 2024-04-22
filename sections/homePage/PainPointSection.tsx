@@ -86,7 +86,7 @@ const PainPointContent = () => {
       {PAIN_POINTS.map(({ tab, description }, index) => {
         return (
           <div key={index}>
-            <Label.Section className="uppercase pt-8 border-t border-primary">
+            <Label.Section className="uppercase text-anon pt-8 border-t border-primary">
               {tab}
             </Label.Section>
             <span className="font-inter text-base md:text-lg text-scarpa-500 font-normal">

@@ -16,7 +16,7 @@ export const ToolsSection = () => {
                   className="flex flex-col gap-5 md:gap-14 h-full"
                   variant="secondary"
                 >
-                  <span className="text-center text-4xl font-medium leading-[105%] uppercase lg:text-5xl xl:text-6xl lg:leading-[110%]">
+                  <span className="text-center text-anon text-4xl font-medium leading-[105%] uppercase lg:text-5xl xl:text-6xl lg:leading-[110%]">
                     {TITLE}
                   </span>
                   <div
