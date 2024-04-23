@@ -7,32 +7,35 @@ import { classed } from "@tw-classed/react";
 import { AppContainer } from "../AppContainer";
 import { Label } from "./Label";
 
-const AccordionWrapper = classed.div("flex py-10 cursor-pointer duration-200", {
-  variants: {
-    variant: {
-      orange: "bg-secondary",
-      green: "bg-primary",
+const AccordionWrapper = classed.div(
+  "w-full flex py-10 cursor-pointer duration-200",
+  {
+    variants: {
+      variant: {
+        orange: "bg-secondary",
+        green: "bg-primary",
+      },
+      open: {
+        true: "",
+      },
     },
-    open: {
-      true: "",
-    },
-  },
-  defaultVariants: {
-    variant: "orange",
-  },
-  compoundVariants: [
-    {
-      open: true,
-      variant: "green",
-      className: "!bg-[#EDFFED]",
-    },
-    {
-      open: true,
+    defaultVariants: {
       variant: "orange",
-      className: "!bg-[#FFF9ED]",
     },
-  ],
-});
+    compoundVariants: [
+      {
+        open: true,
+        variant: "green",
+        className: "!bg-[#EDFFED]",
+      },
+      {
+        open: true,
+        variant: "orange",
+        className: "!bg-[#FFF9ED]",
+      },
+    ],
+  }
+);
 
 const AccordionContentWrapper = classed.div(
   "flex flex-col md:grid md:grid-cols-[1fr_3fr] gap-3 md:items-center"
@@ -82,26 +85,31 @@ const Accordion = ({
         setIsOpen(!isOpen);
       }}
     >
-      <AppContainer
-        size="small"
-        className="grid grid-cols-1 md:grid-cols-[1fr_20px] w-full"
-      >
+      <AppContainer size="small">
         <div className="relative">
-          <AccordionContentWrapper className="relative">
-            <Label.Subtitle
-              className={cn("font-medium duration-200", fontColor)}
-            >
-              {label}
-            </Label.Subtitle>
-            <span
-              className={cn(
-                "text-2xl duration-200 uppercase font-medium md:text-4xl md:font-semibold",
-                fontColor
-              )}
-            >
-              {description}
-            </span>
-          </AccordionContentWrapper>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_20px]">
+            <AccordionContentWrapper className="relative">
+              <Label.Subtitle
+                className={cn("font-medium duration-200", fontColor)}
+              >
+                {label}
+              </Label.Subtitle>
+              <span
+                className={cn(
+                  "text-2xl duration-200 uppercase font-medium md:text-4xl md:font-semibold",
+                  fontColor
+                )}
+              >
+                {description}
+              </span>
+            </AccordionContentWrapper>
+            <Icons.ArrowUp
+              className={cn("duration-200 absolute right-0 top-2", fontColor, {
+                "transform rotate-180": !isOpen,
+              })}
+            />
+          </div>
+
           <AccordionContentWrapper className="overflow-hidden box-border transition-all duration-200 ease-in-out">
             <div>{/* space */}</div>
             <div
@@ -140,11 +148,6 @@ const Accordion = ({
               </div>
             </div>
           </AccordionContentWrapper>
-          <Icons.ArrowUp
-            className={cn("duration-200 absolute right-0 top-2", fontColor, {
-              "transform rotate-180": !isOpen,
-            })}
-          />
         </div>
       </AppContainer>
     </AccordionWrapper>

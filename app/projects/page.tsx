@@ -40,14 +40,12 @@ const SectionTitle = classed.div(
 
 const Illustration = () => {
   return (
-    <div className="relative w-full inset-0">
-      <div
-        className="right-0 ml-auto md:absolute md:top-0 w-[330px] h-[330px] md:right-[100px] md:w-[427px] md:h-[236px] lg:w-[854px] lg:h-[507px] lg:-right-[260px] xl:right-[-110px] lg:top-14 bg-no-repeat"
-        style={{
-          backgroundImage: "url('illustrations/projects-shape-big.svg')",
-        }}
-      ></div>
-    </div>
+    <div
+      className="right-0 ml-auto absolute top-0 w-[330px] h-[330px] md:right-[100px] md:w-[427px] md:h-[236px] lg:w-[854px] lg:h-[507px] lg:-right-[260px] xl:right-[-110px] lg:top-14 bg-no-repeat"
+      style={{
+        backgroundImage: "url('illustrations/projects-shape-big.svg')",
+      }}
+    ></div>
   );
 };
 

@@ -5,12 +5,13 @@ import { classed } from "@tw-classed/react";
 import Link from "next/link";
 import Image from "next/image";
 import { Section } from "@/components/Section";
+import { AppContainer } from "@/components/AppContainer";
 
 const DescriptionSection = classed.section(
   "grid grid-cols-1 gap-14 w-full md:items-center md:grid-cols-2 md:gap-0"
 );
 
-const ContentWrapper = classed.div("px-8 md:px-0", {
+const ContentWrapper = classed.div("md:px-0", {
   variants: {
     reverse: {
       true: "md:ml-[110px]",
@@ -73,63 +74,74 @@ export const BuildDescriptionSection = () => {
       {BUILD_ITEMS.map(({ title, description, image, links = [] }, index) => {
         const isReverse = index % 2 !== 0;
         return (
-          <DescriptionSection key={index}>
-            <ContentWrapper
-              className={cn(
-                "flex flex-col gap-24",
-                isReverse
-                  ? "order-2 md:order-2 pr-8 md:pr-20"
-                  : "md:order-1 pl-8 md:pl-20"
-              )}
-              reverse={isReverse}
-            >
-              <div className="flex flex-col gap-5">
-                <Label.Subtitle className="uppercase font-medium text-black">
-                  {title}
-                </Label.Subtitle>
-                <span className="text-base leading-[150%] font-inter text-gray-600 md:text-lg font-normal">
-                  {description}
-                </span>
-              </div>
-              {links?.length > 0 && (
-                <div className="flex flex-col gap-3 group">
-                  {links?.map(({ title, url = "#" }, index) => {
-                    return (
-                      <Link
-                        className="flex items-center gap-1 text-scarpa-600 hover:text-primary duration-200 py-0.5"
-                        key={index}
-                        href={url}
-                        target="_blank"
-                      >
-                        <span className="text-base font-semibold leading-[110%] uppercase font-rajdhani">
-                          {title}
-                        </span>
-                        <Icons.ArrowRight />
-                      </Link>
-                    );
-                  })}
-                </div>
-              )}
-            </ContentWrapper>
-            <div
-              className={cn(
-                "relative h-[355px] md:h-[520px] object-cover bg-center ",
-                isReverse
-                  ? "order-1 md:order-1 mr-8 md:mr-0"
-                  : "md:order-2 ml-8 md:ml-0"
-              )}
-            >
-              <Image
+          <AppContainer
+            key={index}
+            element={
+              <div
                 className={cn(
-                  "blur-[0.5px]",
-                  isReverse ? "rounded-r-[48px]" : "rounded-l-[48px]"
+                  "absolute h-[355px] md:h-[520px] md:w-[520px] object-cover bg-center ",
+                  isReverse
+                    ? "order-1 md:order-1 md:mr-0"
+                    : "md:order-2 md:ml-0"
                 )}
-                src={image}
-                fill
-                alt="illustration"
-              />
-            </div>
-          </DescriptionSection>
+              >
+                <Image
+                  className={cn(
+                    "blur-[0.5px]",
+                    isReverse ? "rounded-r-[48px]" : "rounded-l-[48px]"
+                  )}
+                  src={image}
+                  fill
+                  alt="illustration"
+                />
+              </div>
+            }
+          >
+            <DescriptionSection>
+              <ContentWrapper
+                className={cn(
+                  "flex flex-col gap-24",
+                  isReverse ? "order-2 md:order-2 pr-8 md:pr-20" : "md:order-1"
+                )}
+                reverse={isReverse}
+              >
+                <div className="flex flex-col gap-5">
+                  <Label.Subtitle className="uppercase font-medium text-black">
+                    {title}
+                  </Label.Subtitle>
+                  <span className="text-base leading-[150%] font-inter text-gray-600 md:text-lg font-normal">
+                    {description}
+                  </span>
+                </div>
+                {links?.length > 0 && (
+                  <div className="flex flex-col gap-3 group">
+                    {links?.map(({ title, url = "#" }, index) => {
+                      return (
+                        <Link
+                          className="flex items-center gap-1 text-scarpa-600 hover:text-primary duration-200 py-0.5"
+                          key={index}
+                          href={url}
+                          target="_blank"
+                        >
+                          <span className="text-base font-semibold leading-[110%] uppercase font-rajdhani">
+                            {title}
+                          </span>
+                          <Icons.ArrowRight />
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              </ContentWrapper>
+              <div
+                className={cn(
+                  isReverse
+                    ? "order-1 md:order-1 md:mr-0"
+                    : "md:order-2 md:ml-0"
+                )}
+              ></div>
+            </DescriptionSection>
+          </AppContainer>
         );
       })}
     </Section.Wrapper>

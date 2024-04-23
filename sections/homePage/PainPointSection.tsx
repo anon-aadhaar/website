@@ -53,7 +53,7 @@ const PAIN_POINTS: PainPointProps[] = [
 const PainPointTabs = () => {
   return (
     <Tabs
-      className="flex lg:hidden"
+      className="flex "
       items={PAIN_POINTS.map(
         ({ tab: tabLabel, title, description, image }) => ({
           label: tabLabel,
@@ -106,8 +106,9 @@ export const PainPointSection = () => {
 
   return (
     <Section.Wrapper className="relative !py-28 overflow-hidden" color="green">
-      <AppContainer className="lg:h-[540px] flex flex-col gap-10 lg:grid lg:gap-24 lg:grid-cols-2">
-        <div className="flex flex-col gap-20">
+      {/* <AppContainer className="lg:h-[540px] flex flex-col gap-10 lg:grid lg:gap-24 lg:grid-cols-2"> */}
+      <AppContainer className="flex flex-col gap-10 lg:grid lg:gap-24 lg:grid-cols-2">
+        <div className="flex flex-col gap-20 text-center lg:text-left">
           <div className="flex flex-col gap-1">
             <Label.Section className="uppercase text-anon">
               AADHAAR PAIN POINTS
@@ -117,12 +118,12 @@ export const PainPointSection = () => {
               ullamcorper nisi, nec dapibus augue nibh sed enim.{" "}
             </span>
           </div>
-          <div className="mx-auto relative size-[230px]">
+          <div className="hidden mx-auto relative size-[230px]">
             <Image fill src={currentPaintPointImage} alt="paint point image" />
           </div>
         </div>
         <div className="overflow-scroll">
-          <PainPointContent />
+          {/* <PainPointContent /> */}
           <PainPointTabs />
         </div>
       </AppContainer>

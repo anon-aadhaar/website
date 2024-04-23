@@ -1,5 +1,6 @@
 import { cn } from "@/shared/utils";
 import { classed } from "@tw-classed/react";
+import { AppContainer } from "../AppContainer";
 
 export const BannerWrapper = classed.div("bg-primary");
 
@@ -26,7 +27,7 @@ const Banner = ({
 }: BannerProps) => {
   return (
     <BannerWrapper className="py-14">
-      <div className={cn("mx-auto px-8 md:px-40 max-w-screen-2xl", className)}>
+      <AppContainer className={cn(className)}>
         <div className="flex flex-col gap-9 items-center justify-between lg:flex-row lg:items-center">
           <div className="flex flex-col gap-4">
             <BannerTitle className={className}>{title}</BannerTitle>
@@ -38,7 +39,7 @@ const Banner = ({
           </div>
           {actions}
         </div>
-      </div>
+      </AppContainer>
     </BannerWrapper>
   );
 };
