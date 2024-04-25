@@ -16,6 +16,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { AppContainer } from "@/components/AppContainer";
 import { Label } from "@/components/ui/Label";
+import { svgHoverAnimation } from "@/shared/utils";
 
 export default function Home() {
   return (
@@ -37,32 +38,7 @@ export default function Home() {
         }
       >
         <motion.div
-          onMouseMove={(e) => {
-            const clientX = e?.clientX;
-            const clientY = e?.clientY;
-
-            const pathElement = document
-              ?.elementFromPoint(clientX, clientY)
-              ?.closest("path");
-
-            if (!pathElement) return;
-
-            const color =
-              (pathElement.attributes as any)?.stroke.value ?? "transparent";
-
-            const startingColor = `#80${color.replace("#", "")}`;
-
-            pathElement.animate(
-              {
-                fill: [startingColor, color],
-              },
-              {
-                duration: 500,
-                iterations: 1,
-                easing: "ease-in-out",
-              }
-            );
-          }}
+          onMouseMove={svgHoverAnimation}
           aria-label="Homepage shapes"
         >
           <Shapes.Homepage

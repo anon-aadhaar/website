@@ -3,19 +3,18 @@ import { Label } from "@/components/ui/Label";
 import { cn } from "@/shared/utils";
 import { classed } from "@tw-classed/react";
 import Link from "next/link";
-import Image from "next/image";
 import { Section } from "@/components/Section";
 import { AppContainer } from "@/components/AppContainer";
 
 const DescriptionSection = classed.section(
-  "grid grid-cols-1 gap-14 w-full md:items-center md:grid-cols-2 md:gap-0"
+  "grid grid-cols-1 w-full md:items-center lg:grid-cols-2 md:gap-0"
 );
 
 const ContentWrapper = classed.div("md:px-0", {
   variants: {
     reverse: {
-      true: "md:ml-[110px]",
-      false: "md:mr-[110px]",
+      true: "lg:ml-[110px]",
+      false: "lg:mr-[110px]",
     },
   },
   defaultVariants: {
@@ -70,38 +69,35 @@ const BUILD_ITEMS: BuildItem[] = [
 
 export const BuildDescriptionSection = () => {
   return (
-    <Section.Wrapper color="green" className=" flex flex-col gap-14">
+    <Section.Wrapper color="green" className="flex flex-col gap-14">
       {BUILD_ITEMS.map(({ title, description, image, links = [] }, index) => {
         const isReverse = index % 2 !== 0;
         return (
           <AppContainer
             key={index}
+            containerClass="flex flex-col gap-14"
             element={
               <div
                 className={cn(
-                  "absolute h-[355px] md:h-[520px] md:w-[520px] object-cover bg-center ",
+                  "relative lg:absolute h-[380px] md:h-[490px] md:w-[788px] xl:h-[590px] xl:w-[888px] object-cover bg-center ",
                   isReverse
-                    ? "order-1 md:order-1 md:mr-0"
-                    : "md:order-2 md:ml-0"
+                    ? "-left-8  md:left-0 md:-translate-x-20 lg:-translate-x-60 rounded-r-[48px]"
+                    : "-right-8 md:right-0 md:translate-x-20 lg:translate-x-60 rounded-l-[48px]"
                 )}
-              >
-                <Image
-                  className={cn(
-                    "blur-[0.5px]",
-                    isReverse ? "rounded-r-[48px]" : "rounded-l-[48px]"
-                  )}
-                  src={image}
-                  fill
-                  alt="illustration"
-                />
-              </div>
+                style={{
+                  backgroundImage: `url(${image})`,
+                  backgroundSize: "cover",
+                }}
+              ></div>
             }
           >
-            <DescriptionSection>
+            <DescriptionSection className="lg:h-[645px] ">
               <ContentWrapper
                 className={cn(
                   "flex flex-col gap-24",
-                  isReverse ? "order-2 md:order-2 pr-8 md:pr-20" : "md:order-1"
+                  isReverse
+                    ? "order-2 md:order-2 pr-8 md:pr-20 md:col-start-2"
+                    : "md:order-1"
                 )}
                 reverse={isReverse}
               >
@@ -133,13 +129,6 @@ export const BuildDescriptionSection = () => {
                   </div>
                 )}
               </ContentWrapper>
-              <div
-                className={cn(
-                  isReverse
-                    ? "order-1 md:order-1 md:mr-0"
-                    : "md:order-2 md:ml-0"
-                )}
-              ></div>
             </DescriptionSection>
           </AppContainer>
         );

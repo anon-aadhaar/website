@@ -11,7 +11,6 @@ import {
   PROJECTS,
 } from "@/shared/content/projects";
 import { LABELS } from "@/shared/labels";
-import Image from "next/image";
 import Link from "next/link";
 
 export const ProjectSection = () => {

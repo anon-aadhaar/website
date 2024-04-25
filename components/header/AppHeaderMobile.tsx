@@ -45,7 +45,6 @@ export const AppHeaderMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    console.log("isOpen", isOpen);
     const clientHeight = document.documentElement.clientHeight;
 
     document.body.style.height = isOpen ? `${clientHeight}px` : `auto`;

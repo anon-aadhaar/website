@@ -6,8 +6,8 @@ import { cn } from "@/shared/utils";
 const AppContainerWrapper = classed.div("mx-auto max-w-screen-xl", {
   variants: {
     size: {
-      default: "px-8 xl:px-0",
-      small: "px-8 xl:px-0",
+      default: "px-8 2xl:px-0",
+      small: "px-8 2xl:px-0",
     },
   },
   defaultVariants: {

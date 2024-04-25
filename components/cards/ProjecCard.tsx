@@ -3,15 +3,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { Tag } from "../ui/Tag";
 
-export const ProjectCard = ({ name, tags = [], links = {} }: ProjectItem) => {
+export const ProjectCard = ({
+  name,
+  categories = [],
+  links = {},
+}: ProjectItem) => {
   return (
     <div className="group shadow-project-card border border-scarpa-100 rounded-[10px] p-6">
       <div className="flex min-h-[220px] relative">
         <div className="flex flex-col gap-5">
           <div className="flex flex-col gap-8">
-            {tags?.length > 0 && (
+            {categories?.length > 0 && (
               <div className="flex gap-[10px] flex-wrap">
-                {tags.map((tag, index) => (
+                {categories.map((tag, index) => (
                   <Tag key={index}>{tag}</Tag>
                 ))}
               </div>

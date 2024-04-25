@@ -6,6 +6,7 @@ import { Banner } from "@/components/elements/Banner";
 import { Icons } from "@/components/Icons";
 import { PageHeader } from "@/components/PageHeader";
 import { Section } from "@/components/Section";
+import { Shapes } from "@/components/Shape";
 import { Button } from "@/components/ui/Button";
 import { Tag } from "@/components/ui/Tag";
 import useProjects from "@/hooks/useProjects";
@@ -13,6 +14,7 @@ import { LINKS } from "@/hooks/useSettings";
 import { ProjectItem } from "@/shared/content/projects";
 import { LABELS } from "@/shared/labels";
 import { ProjectSource, ProjectsSources } from "@/shared/types";
+import { svgHoverAnimation } from "@/shared/utils";
 import { classed } from "@tw-classed/react";
 import Link from "next/link";
 import React from "react";
@@ -38,17 +40,6 @@ const SectionTitle = classed.div(
   "uppercase font-rajdhani text-baltic-sea-950 text-[22px] leading-[125%] font-semibold"
 );
 
-const Illustration = () => {
-  return (
-    <div
-      className="right-0 ml-auto absolute top-0 w-[330px] h-[330px] md:right-[100px] md:w-[427px] md:h-[236px] lg:w-[854px] lg:h-[507px] lg:-right-[260px] xl:right-[-110px] lg:top-14 bg-no-repeat"
-      style={{
-        backgroundImage: "url('illustrations/projects-shape-big.svg')",
-      }}
-    ></div>
-  );
-};
-
 export default function ProjectPage() {
   const {
     projects,
@@ -68,7 +59,10 @@ export default function ProjectPage() {
         title={LABELS.PROJECTS_PAGE.TITLE}
         description={LABELS.PROJECTS_PAGE.DESCRIPTION}
       >
-        <Illustration />
+        <Shapes.ProjectsPage
+          onMouseMove={svgHoverAnimation}
+          className="z-1 right-0 ml-auto absolute top-0 w-[330px] h-[330px] md:right-[100px] md:w-[427px] md:h-[236px] lg:w-[854px] lg:h-[507px] lg:-right-[260px] xl:right-[-110px] lg:top-14 bg-no-repeat"
+        />
       </PageHeader>
       <AppContainer>
         <Section.Wrapper className="!pt-14 grid grid-cols-1 gap-16 lg:grid-cols-[400px_1fr] ">
