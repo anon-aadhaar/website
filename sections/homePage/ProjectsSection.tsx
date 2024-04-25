@@ -4,12 +4,7 @@ import { Icons } from "@/components/Icons";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/ui/Button";
 import { Label } from "@/components/ui/Label";
-import { Tag } from "@/components/ui/Tag";
-import {
-  LinkIconMapping,
-  ProjectItem,
-  PROJECTS,
-} from "@/shared/content/projects";
+import { PROJECTS } from "@/shared/content/projects";
 import { LABELS } from "@/shared/labels";
 import Link from "next/link";
 

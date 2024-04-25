@@ -1,9 +1,6 @@
-import { ProjectCategory } from "../types";
-
 export type WebsiteType = "discord" | "github" | "website";
 export interface ProjectItem {
   pse: boolean;
-  tags?: string[];
   categories: string[];
   name: string;
   description?: string;
