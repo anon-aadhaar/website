@@ -27,15 +27,12 @@ export const arrayToggle = (arr: any[], value: any) => {
 };
 
 export const svgHoverAnimation = (e: any) => {
-  console.log("svgHoverAnimation");
   const clientX = e?.clientX;
   const clientY = e?.clientY;
 
   const pathElement = document
     ?.elementFromPoint(clientX, clientY)
     ?.closest("path");
-
-  console.log("path", pathElement);
 
   if (!pathElement) return;
 
