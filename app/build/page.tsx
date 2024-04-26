@@ -32,7 +32,6 @@ export default function BuildPage() {
         title={LABELS.BUILD_PAGE.TITLE}
         description={LABELS.BUILD_PAGE.DESCRIPTION}
         containerClass="flex flex-col-reverse"
-        element={<Illustration />}
       >
         <Illustration />
       </PageHeader>
