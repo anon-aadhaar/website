@@ -27,7 +27,7 @@ export const ProjectCard = ({
             </div>
           </div>
           {Object.entries(links).length > 0 && (
-            <div className="mt-auto">
+            <div className="flex gap-3 mt-auto">
               {Object.entries(links).map(([key, value]) => {
                 const icon = (LinkIconMapping as any)?.[key];
 
