@@ -20,6 +20,7 @@ export const PROJECTS: ProjectItem[] = [
     name: "AaveAnonify",
     links: {
       website: "https://devfolio.co/projects/aaveanonify-cbd3",
+      github: "https://github.com/MukulKolpe/ETHMumbai",
     },
     event: "ETHMumbai 2024",
     description: "DeFi Meets Artistry in a Tokenized Future",
