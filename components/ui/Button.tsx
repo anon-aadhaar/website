@@ -8,10 +8,10 @@ const ButtonComponent = classed.button(
   {
     variants: {
       variant: {
-        green: "bg-primary text-baltic-sea-100",
-        black: "bg-anon text-baltic-sea-100",
-        white: "bg-baltic-sea-100 text-baltic-sea-900",
-        transparent: "bg-transparent text-scarpa-600 hover:text-primary",
+        green: "bg-primary text-baltic-sea-100 hover:bg-forest-green-900",
+        black: "bg-anon text-baltic-sea-100 hover:bg-anon-accent",
+        white: "bg-baltic-sea-100 text-baltic-sea-900 hover:bg-baltic-sea-200",
+        transparent: "bg-transparent text-scarpa-600 hover:text-scarpa-950",
       },
       size: {
         medium:

@@ -42,6 +42,7 @@ const config: Config = {
         "black-pearl": "#134591",
         "baltic-sea": {
           100: "#F6EDF4",
+          200: "#DED9DE",
           900: "#413941",
           950: "#231F23",
         },
@@ -52,6 +53,7 @@ const config: Config = {
         },
         "forest-green": {
           50: "#EDFFED",
+          900: "#085F0E",
         },
         gray: {
           600: "#4B5563",

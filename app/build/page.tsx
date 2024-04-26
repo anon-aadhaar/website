@@ -8,7 +8,7 @@ const Illustration = () => {
   return (
     <>
       <div
-        className="hidden right-0 top-0 ml-auto md:flex md:absolute md:-right-20 md:top-0 w-[330px] h-[330px] lg:w-[854px] md:h-[292px] md:w-[762px] lg:h-[507px] md:translate-x-40 lg:translate-x-32 xl:translate-x-5 bg-no-repeat"
+        className="hidden right-0 top-0 ml-auto md:flex md:absolute md:-right-20 md:top-20 w-[330px] h-[330px] lg:w-[854px] md:h-[292px] md:w-[762px] lg:h-[507px] md:translate-x-40 lg:translate-x-32 xl:translate-x-5 bg-no-repeat"
         style={{
           backgroundImage: "url('illustrations/build-shape-big.svg')",
           backgroundPosition: "top right",
@@ -32,6 +32,7 @@ export default function BuildPage() {
         title={LABELS.BUILD_PAGE.TITLE}
         description={LABELS.BUILD_PAGE.DESCRIPTION}
         containerClass="flex flex-col-reverse"
+        element={<Illustration />}
       >
         <Illustration />
       </PageHeader>
