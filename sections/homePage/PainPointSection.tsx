@@ -28,24 +28,24 @@ const ImageWrapper = classed.div("relative size-[180px] md:size-[230px]");
 
 const PAIN_POINTS: PainPointProps[] = [
   {
-    tab: "Paint point 1",
-    title: "Paint point number 1",
+    tab: "Data Breaches",
+    title: "Data Breaches",
     description:
-      "Duis rhoncus, urna sit amet tristique commodo, turpis justo ullamcorper nisi, nec dapibus augue nibh sed enim. Nam ultricies finibus fermentum.",
+      "Unauthorized access to Aadhaar data can lead to severe consequences such as identity theft and fraud. By minimizing any personal identity information shared, you eliminate the risk of falling victim to such breaches.",
     image: "/illustrations/paint-point-1.svg",
   },
   {
-    tab: "Paint point 2",
-    title: "Paint point number 2",
+    tab: "Surveillance Concerns",
+    title: "Surveillance Concerns",
     description:
-      "Duis rhoncus, urna sit amet tristique commodo, turpis justo ullamcorper nisi, nec dapibus augue nibh sed enim. Nam ultricies finibus fermentum.",
+      "Concerns about Aadhaar's potential for surveillance, whether by public or private entities, are growing. Minimizing the amount of personal data shared can help individuals mitigate these concerns and maintain a greater degree of anonymity and privacy.",
     image: "/illustrations/paint-point-2.svg",
   },
   {
-    tab: "Paint point 3",
-    title: "Paint point number 3",
+    tab: "Authentication Risks",
+    title: "Authentication Risks",
     description:
-      "Duis rhoncus, urna sit amet tristique commodo, turpis justo ullamcorper nisi, nec dapibus augue nibh sed enim. Nam ultricies finibus fermentum.",
+      "Security lapses in the Aadhaar authentication process can expose individuals to various forms of misuse of your personal information. Anon Aadhaar SSO solves this by never revealing any information that can be linked back to you.",
     image: "/illustrations/paint-point-3.svg",
   },
 ];
@@ -111,11 +111,12 @@ export const PainPointSection = () => {
         <div className="flex flex-col gap-20 text-center lg:text-left">
           <div className="flex flex-col gap-1">
             <Label.Section className="uppercase text-anon">
-              AADHAAR PAIN POINTS
+              PROTECTING YOUR PRIVACY
             </Label.Section>
             <span className="text-lg text-scarpa-500 font-normal font-inter leading-[150%]">
-              Duis rhoncus, urna sit amet tristique commodo, turpis justo
-              ullamcorper nisi, nec dapibus augue nibh sed enim.{" "}
+            Safeguarding your personal information while using Aadhaar is essential. 
+            Anon Aadhaar through zero-knowledge proofs minimize the exposure of your data to unauthorized access, 
+            helping you maintain control over your privacy.{" "}
             </span>
           </div>
           <div className="hidden mx-auto relative size-[230px]">
