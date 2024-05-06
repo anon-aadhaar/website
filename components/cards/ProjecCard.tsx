@@ -16,7 +16,9 @@ export const ProjectCard = ({
             {categories?.length > 0 && (
               <div className="flex gap-[10px] flex-wrap">
                 {categories.map((tag, index) => (
-                  <Tag key={index}>{tag}</Tag>
+                  <Tag className="!cursor-default" key={index}>
+                    {tag}
+                  </Tag>
                 ))}
               </div>
             )}
