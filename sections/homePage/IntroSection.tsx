@@ -1,6 +1,7 @@
 import { AppContainer } from "@/components/AppContainer";
 import { Label } from "@/components/ui/Label";
 import Image from "next/image";
+import { LABELS } from "@/shared/labels";
 
 export const IntroSection = () => {
   return (
@@ -18,11 +19,11 @@ export const IntroSection = () => {
       className="flex flex-col gap-16 w-full"
     >
       <div className="w-full md:max-w-[440px] lg:max-w-[610px] gap-8 md:gap-24 ml-auto">
-        <Label.Section className="uppercase">
-          Anon Aadhaar offers a groundbreaking zero-knowledge protocol
-          empowering Aadhaar citizens to prove their identity while preserving
-          their privacy
-        </Label.Section>
+        {LABELS.HOME_PAGE.INTRO_SECTION.map((label, key) => (
+          <Label.Section key={key} className="uppercase">
+            {label}
+          </Label.Section>
+        ))}
       </div>
     </AppContainer>
   );
