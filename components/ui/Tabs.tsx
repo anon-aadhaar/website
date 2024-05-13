@@ -14,7 +14,7 @@ export const Tabs = ({ items, className }: TabProps) => {
   return (
     <Tab.Group as={Fragment}>
       <div className={cn("flex flex-col", className)}>
-        <Tab.List className="inline-flex mx-auto border border-primary rounded-[11px] p-1 gap-4">
+        <Tab.List className="inline-flex mx-auto border border-primary rounded-[11px] gap-2 p-1 md:gap-4">
           {items?.map(({ label }, index) => {
             return (
               <Tab as="div" key={index} className="outline-none">
@@ -23,7 +23,7 @@ export const Tabs = ({ items, className }: TabProps) => {
                   <Button
                     variant={selected ? "green" : "transparent"}
                     className={cn(
-                      "uppercase !py-2 !px-4 break-words",
+                      "uppercase !px-0 !py-2 md:!px-4 break-words",
                       !selected && "!text-primary"
                     )}
                   >

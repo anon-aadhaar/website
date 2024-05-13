@@ -82,7 +82,10 @@ const PainPointContent = () => {
   const ref = useRef(null);
 
   return (
-    <div ref={ref} className="hidden pb-80 gap-80 lg:flex lg:flex-col">
+    <div
+      ref={ref}
+      className="hidden pb-80 gap-80 lg:flex lg:flex-col last-of-type:pb-0"
+    >
       {PAIN_POINTS.map(({ tab, description }, index) => {
         return (
           <div key={index}>
@@ -105,26 +108,36 @@ export const PainPointSection = () => {
   const currentPaintPointImage = PAIN_POINTS?.[currentPainIndex]?.image ?? "";
 
   return (
-    <Section.Wrapper className="relative !py-28 overflow-hidden" color="green">
-      {/* <AppContainer className="lg:h-[540px] flex flex-col gap-10 lg:grid lg:gap-24 lg:grid-cols-2"> */}
-      <AppContainer className="flex flex-col gap-10 lg:grid lg:gap-24 lg:grid-cols-2">
-        <div className="flex flex-col gap-20 text-center lg:text-left">
-          <div className="flex flex-col gap-1">
-            <Label.Section className="uppercase text-anon">
-              PROTECTING YOUR PRIVACY
-            </Label.Section>
-            <span className="text-lg text-scarpa-500 font-normal font-inter leading-[150%]">
-            Safeguarding your personal information while using Aadhaar is essential. 
-            Anon Aadhaar through zero-knowledge proofs minimize the exposure of your data to unauthorized access, 
-            helping you maintain control over your privacy.{" "}
-            </span>
-          </div>
-          <div className="hidden mx-auto relative size-[230px]">
-            <Image fill src={currentPaintPointImage} alt="paint point image" />
+    <Section.Wrapper
+      className="lg:h-[540px] !py-28 overflow-scroll "
+      color="green"
+    >
+      <AppContainer className="flex flex-col gap-10 lg:grid lg:gap-24 lg:grid-cols-2 sticky">
+        <div className="relative">
+          <div className="flex flex-col gap-20 text-center lg:text-left sticky top-0">
+            <div className="flex flex-col gap-1">
+              <Label.Section className="uppercase text-anon">
+                PROTECTING YOUR PRIVACY
+              </Label.Section>
+              <span className="text-lg text-scarpa-500 font-normal font-inter leading-[150%]">
+                Safeguarding your personal information while using Aadhaar is
+                essential. Anon Aadhaar through zero-knowledge proofs minimize
+                the exposure of your data to unauthorized access, helping you
+                maintain control over your privacy.{" "}
+              </span>
+            </div>
+            <div className="hidden mx-auto relative size-[230px]">
+              <Image
+                fill
+                src={currentPaintPointImage}
+                alt="paint point image"
+              />
+            </div>
           </div>
         </div>
-        <div className="overflow-scroll">
-          {/* <PainPointContent /> */}
+
+        <div>
+          <PainPointContent />
           <PainPointTabs />
         </div>
       </AppContainer>
