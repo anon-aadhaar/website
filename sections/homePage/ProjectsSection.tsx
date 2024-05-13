@@ -13,7 +13,7 @@ export const ProjectSection = () => {
   const projectsOverview = PROJECTS.slice(0, PROJECTS_TO_SHOW);
 
   return (
-    <Section.Wrapper>
+    <Section.Wrapper className="!pb-30" spacing={false}>
       <AppContainer className="grid grid-cols-1 gap-14 lg:grid-cols-[400px_1fr]">
         <Label.Section className="uppercase text-anon">
           {LABELS.HOME_PAGE.PROJECTS.TITLE}

@@ -50,7 +50,7 @@ export default function Home() {
       </PageHeader>
 
       <IntroSection />
-      <AppContainer className="pb-28 pt-16">
+      <AppContainer className="pt-16">
         <Label.Section className="uppercase md:text-center">
           Developers, dive into a new era of security and privacy in your
           applications effortlessly!

@@ -1,11 +1,18 @@
 import { classed } from "@tw-classed/react";
 
-export const SectionWrapper = classed.section("relative py-30", {
+export const SectionWrapper = classed.section("relative", {
   variants: {
     color: {
       green: "bg-forest-green-50",
       blue: "bg-anon",
     },
+    spacing: {
+      true: "py-30",
+      false: "py-0",
+    },
+  },
+  defaultVariants: {
+    spacing: true,
   },
 });
 

@@ -109,7 +109,7 @@ export const PainPointSection = () => {
 
   return (
     <Section.Wrapper
-      className="lg:h-[540px] !py-28 overflow-scroll "
+      className="lg:h-[540px] !py-28 overflow-scroll my-28"
       color="green"
     >
       <AppContainer className="flex flex-col gap-10 lg:grid lg:gap-24 lg:grid-cols-2 sticky">
@@ -138,7 +138,9 @@ export const PainPointSection = () => {
 
         <div>
           <PainPointContent />
-          <PainPointTabs />
+          <div className="flex md:hidden">
+            <PainPointTabs />
+          </div>
         </div>
       </AppContainer>
     </Section.Wrapper>
