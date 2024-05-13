@@ -7,21 +7,17 @@ export interface EventItem {
 
 export const EVENTS: EventItem[] = [
   {
-    eventName: "EthCC",
-    description: "Anon Aadhaar team will attend EthCC.",
-    date: "July 8 - 11, 2024",
-    url: "https://ethcc.io/",
-  },
-  {
     eventName: "Devcon",
-    description: "Anon Aadhaar team will attend Devcon.",
-    date: "Nov 09 - 17, 2024",
+    description:
+      "Anon Aadhaar team will deliver an in-person talks and run workshops with hackers.",
+    date: "Nov 12-15, 2024",
     url: "https://devcon.org/en/",
   },
   {
     eventName: "ETHIndia",
-    description: "Anon Aadhaar team will attend ETHIndia.",
-    date: "Nov 09 - 17, 2024",
+    description:
+      "Anon Aadhaar team will deliver an in-person talk and sponsor prizes for the hackathon.",
+    date: "December, 2024",
     url: "#",
   },
 ];

@@ -55,7 +55,7 @@ export const AppHeaderDesktop = () => {
   const { leftNavItems, rightNavItems } = useSettings();
 
   return (
-    <div className="hidden sticky top-6 md:flex z-10">
+    <div className="hidden sticky top-6 md:flex z-50">
       <div className="flex gap-[70px] mx-auto p-[10px] rounded-lg bg-white/80 backdrop-blur-lg shadow-header">
         <NavItems items={leftNavItems} />
         <Link href="/">

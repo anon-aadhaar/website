@@ -40,6 +40,7 @@ export default function Home() {
         <motion.div
           onMouseMove={svgHoverAnimation}
           aria-label="Homepage shapes"
+          className="z-10"
         >
           <Shapes.Homepage
             className="absolute top-14 lg:top-0 right-0 w-[546px] h-[421px] sm:w-[546px] sm:h-[497px] md:w-[730px] md:h-[545px] xl:w-[900px] xl:h-[705px] translate-x-72 md:translate-x-48 lg:translate-x-20"
@@ -49,7 +50,7 @@ export default function Home() {
       </PageHeader>
 
       <IntroSection />
-      <AppContainer className="pb-30 pt-16">
+      <AppContainer className="pb-28 pt-16">
         <Label.Section className="uppercase md:text-center">
           Developers, dive into a new era of security and privacy in your
           applications effortlessly!

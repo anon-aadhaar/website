@@ -18,6 +18,7 @@ import { svgHoverAnimation } from "@/shared/utils";
 import { classed } from "@tw-classed/react";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const ProjectSourceMapping: Record<
   ProjectSource,
@@ -58,11 +59,20 @@ export default function ProjectPage() {
       <PageHeader
         title={LABELS.PROJECTS_PAGE.TITLE}
         description={LABELS.PROJECTS_PAGE.DESCRIPTION}
+        containerClass="flex flex-col-reverse"
       >
         <Shapes.ProjectsPage
           onMouseMove={svgHoverAnimation}
-          className="z-1 right-0 ml-auto absolute top-0 w-[330px] h-[330px] md:right-[100px] md:w-[427px] md:h-[236px] lg:w-[854px] lg:h-[507px] lg:-right-[260px] xl:right-[-110px] lg:top-14 bg-no-repeat"
+          className="hidden right-0 z-10 ml-auto md:flex md:absolute top-0 w-[330px] h-[330px] md:right-[100px] md:w-[427px] md:h-[236px] lg:w-[854px] lg:h-[507px] lg:-right-[260px] xl:right-[-110px] lg:top-14 bg-no-repeat"
         />
+        <div className="relative size-[330px] right-0 ml-auto -mt-8">
+          <Image
+            src="/illustrations/projects-shape.svg"
+            className="flex md:hidden"
+            fill
+            alt="illustration projects"
+          />
+        </div>
       </PageHeader>
       <AppContainer>
         <Section.Wrapper className="!pt-14 grid grid-cols-1 gap-16 lg:grid-cols-[400px_1fr] ">

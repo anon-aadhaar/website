@@ -1,3 +1,5 @@
+"use client";
+
 import { AppContainer } from "@/components/AppContainer";
 import { Icons } from "@/components/Icons";
 import { Accordion } from "@/components/ui/Accordion";
@@ -6,15 +8,15 @@ import { BlogSection } from "@/sections/learnPage/BlogSection";
 import { WorkflowSection } from "@/sections/learnPage/WorkflowSection";
 import { LABELS } from "@/shared/labels";
 import React from "react";
+import { svgHoverAnimation } from "@/shared/utils";
+import { motion } from "framer-motion";
+import { Shapes } from "@/components/Shape";
 
 const Illustration = () => {
   return (
-    <div
-      className="w-full h-[375px] md:h-[470px] bg-[length:auto_375px] md:bg-[length:auto_470px] bg-repeat-x"
-      style={{
-        backgroundImage: `url('/illustrations/learn-shape.svg')`,
-      }}
-    ></div>
+    <motion.div onMouseMove={svgHoverAnimation} aria-label="learn shapes">
+      <Shapes.LearnPage className="z-10 -translate-x-1/2 md:translate-x-0 md:w-full h-[375px] md:h-[470px] bg-[length:auto_375px] md:bg-[length:auto_470px] bg-repeat-x" />
+    </motion.div>
   );
 };
 

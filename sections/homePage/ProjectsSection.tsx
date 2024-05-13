@@ -21,7 +21,13 @@ export const ProjectSection = () => {
         <div className="flex flex-col gap-14">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {projectsOverview.map((project, index) => {
-              return <ProjectCard key={index} {...project} />;
+              return (
+                <ProjectCard
+                  className="h-full !min-h-[150px] !max-h-[150px] md:!min-h-[220px] md:!max-h-auto"
+                  key={index}
+                  {...project}
+                />
+              );
             })}
           </div>
           <Link className="mx-auto" href="/projects">

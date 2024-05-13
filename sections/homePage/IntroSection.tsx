@@ -1,19 +1,17 @@
 import { AppContainer } from "@/components/AppContainer";
 import { Label } from "@/components/ui/Label";
-import Image from "next/image";
 import { LABELS } from "@/shared/labels";
+import { Shapes } from "@/components/Shape";
+import { motion } from "framer-motion";
+import { svgHoverAnimation } from "@/shared/utils";
 
 export const IntroSection = () => {
   return (
     <AppContainer
       element={
-        <Image
-          className="md:absolute left-0 top-0 h-[350px] w-[430px] md:h-[350px] md:w-[350px] xl:h-[610px] xl:w-[670px]"
-          width={490}
-          height={410}
-          src="/illustrations/intro-shape.svg"
-          alt="intro shape"
-        />
+        <motion.div onMouseMove={svgHoverAnimation}>
+          <Shapes.IntroHomepage className="z-10 md:absolute left-0 top-0 h-[350px] w-[430px] md:h-[350px] md:w-[350px] xl:h-[610px] xl:w-[670px]" />
+        </motion.div>
       }
       containerClass="flex flex-col flex-col-reverse gap-14 md:flex md:justify-center min-h-[410px] lg:min-h-[560px]"
       className="flex flex-col gap-16 w-full"

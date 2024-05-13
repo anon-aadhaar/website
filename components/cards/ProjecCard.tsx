@@ -2,15 +2,22 @@ import { ProjectItem, LinkIconMapping } from "@/shared/content/projects";
 import Link from "next/link";
 import Image from "next/image";
 import { Tag } from "../ui/Tag";
+import { HTMLAttributes } from "react";
+import { cn } from "@/shared/utils";
+
+interface ProjectItemProps
+  extends ProjectItem,
+    HTMLAttributes<HTMLDivElement> {}
 
 export const ProjectCard = ({
   name,
   categories = [],
   links = {},
-}: ProjectItem) => {
+  className,
+}: ProjectItemProps) => {
   return (
-    <div className="group shadow-project-card border border-scarpa-100 rounded-[10px] p-6">
-      <div className="flex min-h-[220px] relative">
+    <div className="relative group shadow-project-card border border-scarpa-100 rounded-[10px] p-6">
+      <div className={cn("flex min-h-[220px] relative", className)}>
         <div className="flex flex-col gap-5">
           <div className="flex flex-col gap-8">
             {categories?.length > 0 && (

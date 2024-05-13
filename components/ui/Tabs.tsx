@@ -23,7 +23,7 @@ export const Tabs = ({ items, className }: TabProps) => {
                   <Button
                     variant={selected ? "green" : "transparent"}
                     className={cn(
-                      "uppercase !py-2 !px-4",
+                      "uppercase !py-2 !px-4 break-words",
                       !selected && "!text-primary"
                     )}
                   >

@@ -11,7 +11,7 @@ import Link from "next/link";
 const EventCard = ({ eventName, description, date }: EventItem) => {
   return (
     <Card.Base
-      className="flex flex-col gap-[14px] md:flex-row md:items-end"
+      className="flex flex-col gap-[14px] md:flex-row md:items-start"
       variant="white"
     >
       <div className="flex flex-col">
@@ -22,7 +22,7 @@ const EventCard = ({ eventName, description, date }: EventItem) => {
           {eventName}
         </Label.Subtitle>
       </div>
-      <span className="text-scarpa-500 font-inter text-base font-normal leading-6">
+      <span className="text-scarpa-500 font-inter text-base font-normal leading-6 md:mt-5">
         {description}
       </span>
     </Card.Base>

@@ -26,6 +26,27 @@ export const arrayToggle = (arr: any[], value: any) => {
   return [...arr, value];
 };
 
+export const animateSvgPath = (pathElement: any) => {
+  if (!pathElement) {
+    console.error("No path element found");
+    return;
+  }
+
+  const color = pathElement.getAttribute("stroke");
+  const startingColor = `#80${color?.replace("#", "")}`;
+
+  pathElement.animate(
+    {
+      fill: [startingColor, color, startingColor],
+    },
+    {
+      duration: 800,
+      iterations: 1,
+      easing: "ease-in-out",
+    }
+  );
+};
+
 export const svgHoverAnimation = (e: any) => {
   const clientX = e?.clientX;
   const clientY = e?.clientY;
@@ -34,20 +55,5 @@ export const svgHoverAnimation = (e: any) => {
     ?.elementFromPoint(clientX, clientY)
     ?.closest("path");
 
-  if (!pathElement) return;
-
-  const color = (pathElement.attributes as any)?.stroke.value ?? "transparent";
-
-  const startingColor = `#80${color.replace("#", "")}`;
-
-  pathElement.animate(
-    {
-      fill: [startingColor, color],
-    },
-    {
-      duration: 500,
-      iterations: 1,
-      easing: "ease-in-out",
-    }
-  );
+  animateSvgPath(pathElement);
 };
