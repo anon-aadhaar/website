@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/og-cover.png",
+        url: "./og-cover.png",
         width: 1200,
         height: 630,
         alt: "Anon Aadhaar",
