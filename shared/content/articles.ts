@@ -2,7 +2,7 @@ import { BlogItem } from "@/shared/types";
 
 export const ARTICLES: BlogItem[] = [
   {
-    url: "https://anon-aadhaar-documentation.vercel.app/blog",
+    url: "https://documentation.anon-aadhaar.pse.dev/blog",
     title: "Anon Aadhaar v1 release",
     date: new Date("2023-09-12"),
     label: "Blog",

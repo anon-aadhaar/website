@@ -18,7 +18,7 @@ const NAVIGATION: MenuItem[] = [
   },
   {
     title: "Documentation",
-    href: "https://anon-aadhaar-documentation.vercel.app/docs/intro",
+    href: "https://documentation.anon-aadhaar.pse.dev/docs/intro",
     position: "right",
     external: true,
   },
@@ -42,7 +42,7 @@ export const SETTINGS = {
 };
 
 export const LINKS: Record<string, string> = {
-  WEBSITE_DEMO: " https://anon-aadhaar-example.vercel.app/",
+  WEBSITE_DEMO: " https://boilerplate.anon-aadhaar.pse.dev/",
   DISCORD: "https://discord.com/invite/sF5CT5rzrR",
   TWITTER: "https://twitter.com/AnonAadhaar",
   TELEGRAM: "https://t.me/anon_aadhaar",
